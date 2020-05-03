@@ -3,6 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Fira+Sans:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -81,14 +86,7 @@ nav ul li a:hover {
   color: #3a9915;
 }
 
-footer {
-  position: fixed; 
-  padding: 10px 10px 0px 10px; 
-  bottom: 0; 
-  background-color: #57d127;
-  width: 100%; 
-  height: 60px;
-}
+
 
 /* Hamburger Menu */
 .menu-toggle {
@@ -256,8 +254,6 @@ section {
   margin-top: 40px;
 }
 
-
-
 .shadow {
   border-radius: 29px;
   width: 480px;
@@ -265,4 +261,23 @@ section {
 
 .fas {
   color: #3a9915 !important;
+}
+
+footer {
+  position: relative; 
+  padding: 10px 10px 0px 10px; 
+  bottom: 0; 
+  background-color: #57d127;
+  background-image: linear-gradient(to right,#66e435 , #378d15);
+  width: 100%; 
+  height: 60px;
+  position: relative ;
+}
+
+.footer{  
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
