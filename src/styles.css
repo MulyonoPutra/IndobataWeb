@@ -191,6 +191,7 @@ footer {
   height: 500px;
   position: relative;
   background-size: cover;
+  border-radius: 0%;
   background-position: center center;
   background-repeat: no-repeat;
   text-align: center;
@@ -253,4 +254,15 @@ section {
   height: 150px;
   margin-left: 60px;
   margin-top: 40px;
+}
+
+
+
+.shadow {
+  border-radius: 29px;
+  width: 480px;
+}
+
+.fas {
+  color: #3a9915 !important;
 }
