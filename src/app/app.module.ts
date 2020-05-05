@@ -26,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
+      { path: '',   redirectTo: '/home', pathMatch: 'full' },
       {path: 'product', component: ProductComponent},
       {path: 'home', component: HomeComponent},
       {path: 'about-us', component: AboutUsComponent},
