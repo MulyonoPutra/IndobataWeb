@@ -190,11 +190,19 @@ nav ul li a:hover {
   height: 100%;
  }
 
+.products {
+  margin-bottom: 20px;
+}
+
+.product {
+  margin-bottom: 20px;
+}
+
 
 }
 
 .jumbotron {
-  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url(assets/img/pav-block.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url(assets/img/building.jpg);
   height: 500px;
   position: relative;
   background-size: cover;
