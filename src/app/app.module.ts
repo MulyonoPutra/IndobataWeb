@@ -27,11 +27,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     RouterModule.forRoot([
       { path: '',   redirectTo: '/home', pathMatch: 'full' },
-      {path: 'product', component: ProductComponent},
-      {path: 'home', component: HomeComponent},
-      {path: 'about-us', component: AboutUsComponent},
-      {path: 'contact-us', component: ContactUsComponent},
-      {path: 'our-clients', component: OurClientsComponent}
+      { path: 'product', component: ProductComponent },
+      { path: 'home', component: HomeComponent },
+      { path: 'about-us', component: AboutUsComponent },
+      { path: 'contact-us', component: ContactUsComponent },
+      { path: 'our-clients', component: OurClientsComponent }
     ]),
     BrowserAnimationsModule,
     FontAwesomeModule
