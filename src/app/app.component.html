@@ -1,39 +1,46 @@
-<nav>
-    <div class="logo" style="font-family: 'Anton', sans-serif;">
-        <ul>
-            <li><img src="assets/img/indobata-logo.png" alt="" class="image"></li>
-        </ul>
 
+
+<nav class="navbar navbar-expand-lg navbar-light">
+  
+  <div class="container">
+    <a class="navbar-brand" href="#">Indobata</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/product']" routerLinkActive="router-link-active">Product</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/about-us']" routerLinkActive="router-link-active">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/our-clients']" routerLinkActive="router-link-active">Our Clients</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/contact-us']" routerLinkActive="router-link-active">Contact</a>
+        </li>
+      </ul>
     </div>
+  </div>
 
-    <div class="container">
-        <ul class="margin">
-            <li> <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active" >Home</a> </li>
-            <li> <a class="nav-link" [routerLink]="['/product']" routerLinkActive="router-link-active">Product</a> </li>
-            <li> <a class="nav-link" [routerLink]="['/about-us']" routerLinkActive="router-link-active">About Us</a> </li>
-            <li> <a class="nav-link" [routerLink]="['/our-clients']" routerLinkActive="router-link-active">Our Client</a> </li>
-            <li> <a class="nav-link" [routerLink]="['/contact-us']" routerLinkActive="router-link-active">Contact</a> </li>
-        </ul>
-
-        <div class="menu-toggle">
-            <input type="checkbox">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
 </nav>
 
 <router-outlet></router-outlet>
 
 <footer class="footer">
-    <div style="display: flex; justify-content: center; color: rgb(87, 85, 85); font-family: 'Courgette', cursive;;" > 
-        Copyright © 2020 Indobata. All right reserved.
-        <ul class="social" style="cursor: pointer;">
-             <li class="fab fa-instagram ml-0"><a href="https://www.tokopedia.com/"></a></li>
-            <li class="fab fa-facebook-f ml-2"><a href="https://www.tokopedia.com/"></a></li>
-            <li class="fab fa-twitter ml-2"><a href="https://www.tokopedia.com/"></a></li>
-            <li class="fab fa-linkedin ml-2"><a href="https://www.tokopedia.com/"></a></li>
-        </ul>
-    </div>
+  <div style="display: flex; justify-content: center; color: rgb(87, 85, 85); font-family: 'Courgette', cursive;;">
+    Copyright © 2020 Indobata. All right reserved.
+    <ul class="social" style="cursor: pointer;">
+      <li class="fab fa-instagram ml-0"><a href="https://www.tokopedia.com/"></a></li>
+      <li class="fab fa-facebook-f ml-2"><a href="https://www.tokopedia.com/"></a></li>
+      <li class="fab fa-twitter ml-2"><a href="https://www.tokopedia.com/"></a></li>
+      <li class="fab fa-linkedin ml-2"><a href="https://www.tokopedia.com/"></a></li>
+    </ul>
+  </div>
 </footer>

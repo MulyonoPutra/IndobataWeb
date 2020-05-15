@@ -9,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class AppComponent implements OnInit {
+  title(title: any) {
+    throw new Error("Method not implemented.");
+  }
 
   ngOnInit(): void {
     const menuToggle = document.querySelector('.menu-toggle input');
