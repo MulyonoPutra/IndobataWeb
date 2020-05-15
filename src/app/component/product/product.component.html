@@ -1,1 +1,120 @@
-<p>product works!</p>
+<div class="container mt-5">
+    <div class="row">
+        <button type="button" class="btn btn-outline-success btn-lg ml-2 col" (click)="showGentengImage()">Genteng Beton</button>
+        <button type="button" class="btn btn-outline-success btn-lg ml-2 col" (click)="showPavingImage()">Paving Block</button>
+        <button type="button" class="btn btn-outline-success btn-lg ml-2 col">Roster</button>
+        <button type="button" class="btn btn-outline-success btn-lg ml-2 col">Batako Press</button>
+        <button type="button" class="btn btn-outline-success btn-lg ml-2 col">Kanstin</button>
+        <button type="button" class="btn btn-outline-success btn-lg ml-2 col">Buis Beton</button>
+        <button type="button" class="btn btn-outline-success btn-lg ml-2 col">Rangka Atap Baja Ringan</button>
+        <button type="button" class="btn btn-outline-success btn-lg ml-2 col">Ubin Difabel</button>
+    </div>
+</div>
+&nbsp;
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+
+            <div class="container">
+                <div *ngIf="emptyImage">
+                    <h1 style="color: rgb(187, 187, 187); text-align: center;">Empty</h1>
+                </div>
+            </div>
+           
+            <div class="container" >
+                <div class="ml-5" *ngIf="gentengBeton">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card shadow" style="width: 18rem; padding: 10px;
+                            border-radius: 20px 50px; margin-bottom: 20px;">
+                                <img class="card-img-top" src="assets/img/genteng1.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text">Genteng Beton</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="col">
+                            <div class="card shadow" style="width: 18rem;   padding: 10px;
+                            border-radius: 20px 50px;">
+                                <img class="card-img-top" src="assets/img/genteng2.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text">Genteng Beton</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="col">
+                            <div class="card shadow" style="width: 18rem;   padding: 10px;
+                            border-radius: 20px 50px;">
+                                <img class="card-img-top" src="assets/img/genteng3.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text">Genteng Beton</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="col">
+                            <div class="card shadow" style="width: 18rem;   padding: 10px;
+                            border-radius: 20px 50px;">
+                                <img class="card-img-top" src="assets/img/genteng4.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text">Genteng Beton</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container">
+                <div class="ml-5" *ngIf="pavingBlock">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card shadow" style="width: 18rem; padding: 10px;
+                            border-radius: 20px 50px; margin-bottom: 20px;">
+                                <img class="card-img-top img-size" src="assets/img/paving5.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text">Paving</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="col">
+                            <div class="card shadow" style="width: 18rem; padding: 10px;
+                            border-radius: 20px 50px;">
+                                <img class="card-img-top img-size" src="assets/img/paving2.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text">Paving</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="col">
+                            <div class="card shadow" style="width: 18rem; padding: 10px;
+                            border-radius: 20px 50px;">
+                                <img class="card-img-top img-size" src="assets/img/paving2.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text">Paving</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="col">
+                            <div class="card shadow" style="width: 18rem; padding: 10px;
+                            border-radius: 20px 50px;">
+                                <img class="card-img-top img-size" src="assets/img/paving4.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text">Paving</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+&nbsp;
