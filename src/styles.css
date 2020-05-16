@@ -138,6 +138,24 @@ footer {
   margin-left:-30px;
 }
 
+.animate__animated.animate__fadeInRightBig {
+  --animate-duration: 3s;
+}
+
+.animate__animated.animate__zoomInRight {
+  --animate-duration: 4s;
+}
+
+.animate__animated.animate__zoomInDown {
+  --animate-duration: 4s;
+}
+
+/* This changes all the animations globaly */
+:root {
+  --animate-duration: 1100ms;
+  --animation-delay: 0.9s;
+}
+
 
 
 /* DESKTOP VERSION */
