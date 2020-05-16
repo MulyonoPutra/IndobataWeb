@@ -29,6 +29,7 @@ export class ProductComponent implements OnInit {
     this.pavingBlock = true;
     this.gentengBeton = false;
     this.emptyImage = false;
+    this.roster = false;
   }
 
   showRosterImage() {
