@@ -156,6 +156,11 @@ footer {
   --animation-delay: 0.9s;
 }
 
+.btn-outline-success {
+  color: #57d127;
+  border-color: #57d127;
+}
+
 
 
 /* DESKTOP VERSION */
