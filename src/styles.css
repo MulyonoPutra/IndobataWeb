@@ -2,9 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Cabin+Condensed&family=Lobster+Two&display=swap');
 
 body {
-  font-family: 'Francois One', sans-serif;
+  font-family: 'Boogaloo', cursive;
+  font-size: 18px;
   overflow-x: hidden;
 }
 .navbar-brand {
@@ -150,11 +153,11 @@ footer {
 }
 
 .animate__animated.animate__zoomInRight {
-  --animate-duration: 3s;
+  --animate-duration: 2s;
 }
 
 .animate__animated.animate__zoomInDown {
-  --animate-duration: 3s;
+  --animate-duration: 2s;
 }
 
 /* This changes all the animations globaly */
