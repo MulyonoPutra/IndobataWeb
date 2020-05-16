@@ -10,6 +10,7 @@ export class ProductComponent implements OnInit {
   public emptyImage = true;
   public gentengBeton = false;
   public pavingBlock = false;
+  public roster = false;
 
   constructor() {}
 
@@ -21,6 +22,7 @@ export class ProductComponent implements OnInit {
     this.gentengBeton = true;
     this.pavingBlock = false;
     this.emptyImage = false;
+    this.roster = false;
   }
 
   showPavingImage() {
@@ -28,4 +30,13 @@ export class ProductComponent implements OnInit {
     this.gentengBeton = false;
     this.emptyImage = false;
   }
+
+  showRosterImage() {
+    this.roster = true;
+    this.pavingBlock = false;
+    this.emptyImage = false;
+    this.gentengBeton = false;
+
+  }
+
 }

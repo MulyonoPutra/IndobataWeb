@@ -1,6 +1,7 @@
 <div class="container">
   <div class="card rounded">
     <div class="container mt-5">
+      <!-- Button -->
       <div class="row">
         <button type="button" class="btn btn-outline-success btn-lg ml-2 col" (click)="showGentengImage()">
           Genteng Beton
@@ -8,7 +9,7 @@
         <button type="button" class="btn btn-outline-success btn-lg ml-2 col" (click)="showPavingImage()">
           Paving Block
         </button>
-        <button type="button" class="btn btn-outline-success btn-lg ml-2 col">
+        <button type="button" class="btn btn-outline-success btn-lg ml-2 col" (click)="showRosterImage()">
           Roster
         </button>
         <button type="button" class="btn btn-outline-success btn-lg ml-2 col">
@@ -27,11 +28,14 @@
           Ubin Difabel
         </button>
       </div>
+      <hr class="line1">
+      <!-- Button -->
     </div>
     &nbsp;
     <div class="container">
       <div class="card">
         <div class="card-body">
+          <!-- Empty Image Preview -->
           <div class="container">
             <div *ngIf="emptyImage">
               <h1 style="color: rgb(187, 187, 187); text-align: center;">
@@ -40,6 +44,7 @@
             </div>
           </div>
 
+          <!-- Genteng -->
           <div class="container">
             <div class="ml-5" *ngIf="gentengBeton">
               <div class="row">
@@ -50,7 +55,7 @@
                       border-radius: 20px 50px;
                       margin-bottom: 20px;
                     ">
-                    <img class="card-img-top" src="assets/img/genteng1.jpg" alt="Card image cap" />
+                    <img class="card-img-top img-size" src="assets/img/genteng1.jpg" alt="Card image cap" />
                     <div class="card-body">
                       <p class="card-text">Genteng Beton</p>
                     </div>
@@ -64,7 +69,7 @@
                       border-radius: 20px 50px;
                       margin-bottom: 20px;
                     ">
-                    <img class="card-img-top" src="assets/img/genteng2.jpg" alt="Card image cap" />
+                    <img class="card-img-top img-size" src="assets/img/genteng2.jpg" alt="Card image cap" />
                     <div class="card-body">
                       <p class="card-text">Genteng Beton</p>
                     </div>
@@ -78,7 +83,7 @@
                       border-radius: 20px 50px;
                       margin-bottom: 20px;
                     ">
-                    <img class="card-img-top" src="assets/img/genteng3.jpg" alt="Card image cap" />
+                    <img class="card-img-top img-size" src="assets/img/genteng3.jpg" alt="Card image cap" />
                     <div class="card-body">
                       <p class="card-text">Genteng Beton</p>
                     </div>
@@ -92,7 +97,7 @@
                       border-radius: 20px 50px;
                       margin-bottom: 20px;
                     ">
-                    <img class="card-img-top" src="assets/img/genteng4.jpg" alt="Card image cap" />
+                    <img class="card-img-top img-size" src="assets/img/genteng4.jpg" alt="Card image cap" />
                     <div class="card-body">
                       <p class="card-text">Genteng Beton</p>
                     </div>
@@ -102,6 +107,7 @@
             </div>
           </div>
 
+          <!-- Paving -->
           <div class="container">
             <div class="ml-5" *ngIf="pavingBlock">
               <div class="row">
@@ -140,7 +146,7 @@
                       border-radius: 20px 50px;
                       margin-bottom: 20px;
                     ">
-                    <img class="card-img-top img-size" src="assets/img/paving2.jpg" alt="Card image cap" />
+                    <img class="card-img-top img-size" src="assets/img/kanstin3.jpg" alt="Card image cap" />
                     <div class="card-body">
                       <p class="card-text">Paving</p>
                     </div>
@@ -160,13 +166,105 @@
                     </div>
                   </div>
                 </div>
+
+                <div class="col res">
+                  <div class="card shadow" style="
+                      width: 18rem;
+                      padding: 10px;
+                      border-radius: 20px 50px;
+                      margin-bottom: 20px;
+                    ">
+                    <img class="card-img-top img-size" src="assets/img/kanstin4.jpg" alt="Card image cap" />
+                    <div class="card-body">
+                      <p class="card-text">Kanstin M</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col res">
+                  <div class="card shadow" style="
+                      width: 18rem;
+                      padding: 10px;
+                      border-radius: 20px 50px;
+                      margin-bottom: 20px;
+                    ">
+                    <img class="card-img-top img-size" src="assets/img/kanstin4.jpg" alt="Card image cap" />
+                    <div class="card-body">
+                      <p class="card-text">Kanstin Taman</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
+          <!-- Roster -->
+          <div class="container">
+            <div class="ml-5" *ngIf="roster">
+              <div class="row">
+                <div class="col res">
+                  <div class="card shadow" style="
+                      width: 18rem;
+                      padding: 10px;
+                      border-radius: 20px 50px;
+                      margin-bottom: 20px;
+                    ">
+                    <img class="card-img-top img-size" src="assets/img/roster.jpg" alt="Card image cap" />
+                    <div class="card-body">
+                      <p class="card-text">Roster</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col res">
+                  <div class="card shadow" style="
+                      width: 18rem;
+                      padding: 10px;
+                      border-radius: 20px 50px;
+                      margin-bottom: 20px;
+                    ">
+                    <img class="card-img-top img-size" src="assets/img/roster2.jpg" alt="Card image cap" />
+                    <div class="card-body">
+                      <p class="card-text">Roster</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col res">
+                  <div class="card shadow" style="
+                      width: 18rem;
+                      padding: 10px;
+                      border-radius: 20px 50px;
+                      margin-bottom: 20px;
+                    ">
+                    <img class="card-img-top img-size" src="assets/img/roster3.jpg" alt="Card image cap" />
+                    <div class="card-body">
+                      <p class="card-text">Roster</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col res">
+                  <div class="card shadow" style="
+                      width: 18rem;
+                      padding: 10px;
+                      border-radius: 20px 50px;
+                      margin-bottom: 20px;
+                    ">
+                    <img class="card-img-top img-size" src="assets/img/roster4.jpg" alt="Card image cap" />
+                    <div class="card-body">
+                      <p class="card-text">Roster</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
     &nbsp;
   </div>
-</div>
+</div> <!-- Big Container -->
 &nbsp;
