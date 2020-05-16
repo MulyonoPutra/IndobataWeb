@@ -7,9 +7,6 @@ body {
   font-family: 'Francois One', sans-serif;
   overflow-x: hidden;
 }
-
-
-
 .navbar-brand {
   font-family: 'Francois One', sans-serif;
   font-size: 32px;
@@ -112,8 +109,8 @@ body {
 
 .btn-primary {
   color: #fff;
-  background-color: #57d127 !important;
-  border-color: #57d127 !important;
+  background-image: linear-gradient(to right,#3c9e16, #5bd32b , #4cff16) !important;
+  border-color: #ffffff !important;
 }
 
 .btn-outline-success {
@@ -188,6 +185,19 @@ footer {
   height: 550px;
   border-radius: 50px;
   margin-right: 10px;
+}
+
+.zoom {
+  height: 300px; /* [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+.zoom img {
+  transition: transform .5s ease;
+}
+
+.zoom:hover img {
+  transform: scale(1.5);
 }
 
 
