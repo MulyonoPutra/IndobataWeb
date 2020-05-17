@@ -5,10 +5,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Cabin+Condensed&family=Lobster+Two&display=swap');
 
+/* ===================Both CSS -> Desktop and Mobile Version ================================ */
+
 body {
   font-family: 'Boogaloo', cursive;
   font-size: 18px;
-  overflow-x: hidden;
 }
 .navbar-brand {
   font-family: 'Francois One', sans-serif;
@@ -203,6 +204,24 @@ footer {
   transform: scale(1.5);
 }
 
+.gradient {
+  background-image: linear-gradient(to bottom right,#ffffff, #40e41767 , #ffffff) !important;
+}
+
+.about-us-sec {
+  height: 400px;
+  width: 18rem;
+}
+
+.fas {
+  color: #41991f;
+}
+
+.border-col {
+  border-color: rgba(236, 236, 234, 0.452);
+}
+
+/* ========================================================================================================= */
 
 
 /* DESKTOP VERSION */
@@ -281,4 +300,39 @@ footer {
     margin-right: 10px;
   }
 
+  .card-address {
+    height: 440px;
+    max-width: 18rem;
+  }
+
+  .card-vm {
+    height: 580px;
+    max-width: 410px;
+    margin: auto;
+  }
+
+  li .list-group-item {
+    height: 10px;
+  }
+
+  .card-header{
+    border-radius: 20px;
+  }
+
+}
+
+
+/* MOBILE VERSION */
+
+@media (max-width: 575.98px) { 
+  .card-address {
+    height: 490px;
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .card-vm {
+    height: 610px;
+    max-width: 400px;
+  }
 }
