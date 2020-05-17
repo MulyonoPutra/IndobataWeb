@@ -87,30 +87,36 @@
 
       <div class="card rounded mt-3 mb-3 border-col">
         <div class="card-body">
-          <div class="form-group">
+          <form class="form-group"
+          id="my-form"
+          action="https://formspree.io/meqreaqg"
+          method="POST">
             <input
               class="form-control form-control-lg mb-3"
-              type="text"
+              type="text" name="name"
               placeholder="Name"
             />
             <input
               class="form-control form-control-lg mb-3"
-              type="text"
+              type="text" name="email"
               placeholder="Email Address"
             />
             <textarea
               style="height: 120px;"
               class="form-control form-control-lg"
-              type="text"
+              type="text" name="messages"
               placeholder="Messages"
             ></textarea>
-          </div>
+          
           <button
             style="margin-right: auto;"
-            class="btn btn-primary rounded border"
+            class="btn btn-primary rounded border mt-2"
+            id="send"
           >
             Send Messages
           </button>
+        </form>
+          <p id="my-form-status"></p>
         </div>
       </div>
     </div>
