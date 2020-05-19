@@ -11,8 +11,8 @@
 /* =================== Both CSS -> Desktop and Mobile Version ================================ */
 
 body {
-  font-family: 'Livvic', sans-serif;
-    font-size: 17px;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 18px;
 }
 .navbar-brand {
   font-family: 'Poppins', sans-serif;
@@ -273,14 +273,12 @@ body {
   margin-left: 80px;
   vertical-align: center;
   color: rgb(109, 109, 107);
-  font-size: 16px;
 }
 
 .paragraf1 {
   text-align: left; 
   vertical-align: center;
   color: rgb(109, 109, 107);
-  font-size: 16px;
 }
 
 p {
@@ -291,6 +289,29 @@ h5 {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
 }
+
+.overlay {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .8);
+  z-index: 9999;
+  transition: 8s;
+
+}
+
+.overlay :target {
+  width: auto;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .8);
+
+}
+
 
 
 /* ========================================================================================================= */
