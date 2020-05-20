@@ -1,13 +1,14 @@
+/* Send form to gmail using Ajax & Formstree */
+
 window.addEventListener("DOMContentLoaded", function() {
       
     // get the form elements defined in your form HTML above
-    
     var form = document.getElementById("my-form");
     var button = document.getElementById("send");
     var status = document.getElementById("my-form-status");
 
+
     // Success and Error functions for after the form is submitted
-    
     function success() {
       form.reset();
       button.style = "display: none ";
@@ -18,8 +19,8 @@ window.addEventListener("DOMContentLoaded", function() {
       status.innerHTML = "Oops! There was a problem.";
     }
 
-    // handle the form submission event
 
+    // handle the form submission event
     form.addEventListener("submit", function(ev) {
       ev.preventDefault();
       var data = new FormData(form);
@@ -27,8 +28,8 @@ window.addEventListener("DOMContentLoaded", function() {
     });
   });
   
+  
   // helper function for sending an AJAX request
-
   function ajax(method, url, data, success, error) {
     var xhr = new XMLHttpRequest();
     xhr.open(method, url);

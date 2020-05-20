@@ -11,6 +11,7 @@ export class ProductComponent implements OnInit {
   public gentengBeton = false;
   public pavingBlock = false;
   public roster = false;
+  public batako = false;
 
   constructor() {}
 
@@ -18,26 +19,37 @@ export class ProductComponent implements OnInit {
     this.emptyImage = true;
   }
 
-  showGentengImage() {
+   public showGentengImage() {
     this.gentengBeton = true;
     this.pavingBlock = false;
     this.emptyImage = false;
     this.roster = false;
+    this.batako = false;
   }
+  
 
-  showPavingImage() {
+  public showPavingImage() {
     this.pavingBlock = true;
     this.gentengBeton = false;
     this.emptyImage = false;
     this.roster = false;
+    this.batako = false;
   }
 
-  showRosterImage() {
+  public showRosterImage() {
     this.roster = true;
     this.pavingBlock = false;
     this.emptyImage = false;
     this.gentengBeton = false;
+    this.batako = false;
+  }
 
+  public showBatakoImage() {
+    this.batako = true;
+    this.roster = false;
+    this.pavingBlock = false;
+    this.emptyImage = false;
+    this.gentengBeton = false;
   }
 
 }

@@ -31,14 +31,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     AOS.init();
-    const menuToggle = document.querySelector('.menu-toggle input');
-    const nav = document.querySelector('nav ul');
-    const jumbotron = document.querySelector('jumbotron');
-    menuToggle.addEventListener('click', () => {
-        nav.classList.toggle('slide');
-        jumbotron.classList.remove();
-
-    });
   }
   
 }
