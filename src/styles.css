@@ -127,6 +127,11 @@ body {
   width: 200px;
 }
 
+ .brand1 {
+  height: 50px;
+  width: 210px;
+}
+
 .footer {
   position: relative; 
   padding: 10px 70px 0px 10px; 
