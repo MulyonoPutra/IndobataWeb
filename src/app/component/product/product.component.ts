@@ -20,18 +20,16 @@ export class ProductComponent implements OnInit {
     this.emptyImage = true;
   }
 
-   public showGentengImage() {
+  public showGentengImage() {
     this.gentengBeton = true;
     if (this.gentengBeton) {
       this.emptyImage = (this.pavingBlock = (this.roster = ( this.batako = false )));
     }
   }
   
-
   public showPavingImage() {
     this.pavingBlock = true;
     this.emptyImage = (this.gentengBeton = (this.roster = ( this.batako = false )));
-
   }
 
   public showRosterImage() {

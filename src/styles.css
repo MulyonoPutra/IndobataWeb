@@ -29,7 +29,7 @@ body {
 }
 
 .jumbotron {
-  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url(assets/img/building.jpg);
+  background-image: linear-gradient( rgb(255, 255, 255), rgba(245, 229, 229, 0.5),rgb(255, 255, 255)), url(https://cutewallpaper.org/21/the-wall-hd/Wall-Background-Wallpaper-HD-16566-Baltana.jpg);  
   height: 400px;
   position: relative;
   background-size: cover;
@@ -128,7 +128,8 @@ body {
 }
 
  .brand1 {
-  height: 50px;
+  margin-top: 10px;
+  height: 40px;
   width: 210px;
 }
 
@@ -366,7 +367,7 @@ h5 {
   }
 
   .jumbotron {
-    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url(assets/img/building.jpg);
+    background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.253), rgb(255, 255, 255)), url(https://cutewallpaper.org/21/the-wall-hd/Wall-Background-Wallpaper-HD-16566-Baltana.jpg);
     height: 500px;
     position: relative;
     background-size: cover;
@@ -469,7 +470,9 @@ h5 {
   .logo-indobata {
     height: 30px;
     width: 30px;
-    margin-top: 10px;
+    margin-right: 7px;
+    margin-bottom: 10px;
+
   }
 
   .vision {
