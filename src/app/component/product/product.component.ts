@@ -7,11 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ProductComponent implements OnInit {
-  public emptyImage = true;
-  public gentengBeton = false;
-  public pavingBlock = false;
-  public roster = false;
-  public batako = false;
+  
+  public emptyImage: any;
+  public gentengBeton: any;
+  public pavingBlock: any;
+  public roster: any;
+  public batako: any;
 
   constructor() {}
 
@@ -21,35 +22,26 @@ export class ProductComponent implements OnInit {
 
    public showGentengImage() {
     this.gentengBeton = true;
-    this.pavingBlock = false;
-    this.emptyImage = false;
-    this.roster = false;
-    this.batako = false;
+    if (this.gentengBeton) {
+      this.emptyImage = (this.pavingBlock = (this.roster = ( this.batako = false )));
+    }
   }
   
 
   public showPavingImage() {
     this.pavingBlock = true;
-    this.gentengBeton = false;
-    this.emptyImage = false;
-    this.roster = false;
-    this.batako = false;
+    this.emptyImage = (this.gentengBeton = (this.roster = ( this.batako = false )));
+
   }
 
   public showRosterImage() {
     this.roster = true;
-    this.pavingBlock = false;
-    this.emptyImage = false;
-    this.gentengBeton = false;
-    this.batako = false;
+    this.emptyImage = (this.gentengBeton = (this.pavingBlock = ( this.batako = false )));
   }
 
   public showBatakoImage() {
     this.batako = true;
-    this.roster = false;
-    this.pavingBlock = false;
-    this.emptyImage = false;
-    this.gentengBeton = false;
+    this.emptyImage = (this.gentengBeton = (this.roster = ( this.pavingBlock = false )));
   }
 
 }
