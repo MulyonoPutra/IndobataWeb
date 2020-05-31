@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@500&family=Kreon:wght@500&family=Livvic:wght@600&family=Rancho&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@500&display=swap');
 /* =================== Both CSS -> Desktop and Mobile Version ================================ */
 
 body {
-  font-family: 'Trebuchet MS', sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
 }
 .navbar-brand {
