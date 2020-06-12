@@ -11,9 +11,8 @@ import * as AOS from 'aos';
 
 
 export class AppComponent implements OnInit {
-  title(title: any) {
-    throw new Error("Method not implemented.");
-  }
+
+  title: 'indobata';
 
   showLoadingIndicator = true;
 
@@ -34,9 +33,3 @@ export class AppComponent implements OnInit {
   }
   
 }
-
-
-
-
-
-
