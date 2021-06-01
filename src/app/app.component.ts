@@ -4,13 +4,9 @@ import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
 })
-
-
-
 export class AppComponent implements OnInit {
-
   title: 'indobata';
 
   showLoadingIndicator = true;
@@ -24,11 +20,9 @@ export class AppComponent implements OnInit {
         this.showLoadingIndicator = false;
       }
     });
-
   }
 
   ngOnInit(): void {
     AOS.init();
   }
-  
 }
