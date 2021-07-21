@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-product',
   template: `
-  <div class="jumbotron" style="color: #40a11ade;">
+    <div class="jumbotron" style="color: #40a11ade;">
       <div
         class="title-header animate__animated animate__zoomInDown font-poppins"
       >
@@ -509,7 +509,8 @@ import { Component, OnInit } from '@angular/core';
         </div>
       </div>
       <!-- Big Container -->
-    </div> `,
+    </div>
+  `,
 })
 export class ProductComponent implements OnInit {
   public emptyImage: any;

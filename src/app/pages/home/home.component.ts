@@ -34,9 +34,7 @@ import { Component, OnInit } from '@angular/core';
           </h4>
           <div class="card-body">
             <p class="card-text" style="text-align: center;">
-              Produk dengan bahan beton berkualitas dan mampu bersaing dengan
-              perusahaan konstruksi nasional, Indobata mampu memberikan harga
-              jual yang terjangkau oleh masyarakat.
+              Indobata is able to give competitive selling prices for the community by using high-quality concrete materials and competing with national construction companies.
             </p>
           </div>
         </div>
@@ -54,9 +52,7 @@ import { Component, OnInit } from '@angular/core';
           </h4>
           <div class="card-body">
             <p class="card-text" style="text-align: center;">
-              Menggunakan bahan baku bermutu dengan pengawasan yang baik sesuai
-              standar yang ada sehingga banyak digunakan dalam berbagai proyek,
-              baik berskala nasional maupun lokal.
+              Using high-quality raw materials under strict supervision in accordance with established standards, so that it could be utilized in a wide range of projects on a national and local scale.
             </p>
           </div>
         </div>
@@ -74,8 +70,7 @@ import { Component, OnInit } from '@angular/core';
           </h4>
           <div class="card-body">
             <p class="card-text" style="text-align: center;">
-              Indobata terus melakukan inovasi dalam mengembangkan produk hingga
-              tidak ketinggalan trend desain arsitektur yang terus berkembang.
+              Indobata continues to produce innovative products in order to keep up with the expanding architectural design trend.
             </p>
           </div>
         </div>
@@ -88,23 +83,17 @@ import { Component, OnInit } from '@angular/core';
       <div class="container">
         <article style="text-align: center;">
           <p>
-            CV. Indobata berdiri sejak tahun 2003
+            Indobata was established in 2003.
             <br />
-            merupakan perusahaan yang memproduksi bahan konstruksi berupa
-            genteng beton, ubin, paving block (conblock),
+            is a manufacturer building materials such as concrete tiles, tiles, and paving stones (conblocks),
             <br />
-            batako press, buis beton (gorong-gorong), roster atau loster,
-            kansteen (kanstin), serta genteng keramik berbagai merk.
+            Various kinds of press bricks, concrete culverts (culverts), roster or loster, kansteen (kanstin), and ceramic tiles.
             <br />
-            Dengan harga yang relatif murah namun kami tidak melupakan nilai
-            estetika dari suatu produk,
+            With a relatively low price, also without missing the product's aesthetic value,
             <br />
-            kami memilih bahan baku dengan kualitas terbaik, Dengan harga
-            terjangkau, relatif murah.
+            We choose the highest-quality raw materials at the best possible price, making them comparatively reasonable.
             <br />
-            Akan tetapi, Indobata tetap mengedepankan nilai estetika serta
-            menggunakan bahan baku dengan kualitas terbaik yang telah
-            terstandarisasi.
+            Indobata, on the other hand, continues to place a premium on aesthetics and the use of standardized, high-quality raw materials.
           </p>
         </article>
       </div>

@@ -42,9 +42,7 @@ import { Component, OnInit } from '@angular/core';
                       Vision
                     </h3>
                     <p class="paragraf">
-                      Indobata selalu menghadirkan produk beton berkualitas
-                      prima, dekoratif, serta ketahanan produk dalam segala
-                      cuaca, dan mampu memenuhi kebutuhan pasar yang ada.
+                      Indobata is always able to meet the needs of the existing market by presenting concrete high - quality products, decorative, and product resistance in all weathers.
                     </p>
                   </div>
                 </div>
