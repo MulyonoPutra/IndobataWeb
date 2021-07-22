@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
 import { createRequestOption } from '../../utility/request-utils';
 import { Category, getCategoryIdentifier } from '../../domain/entities/category';
 import { isPresent } from '../../utility/operators';
-import { CategoryRepository } from '../../repository/category.repository';
+import { CategoryRepository } from '../../repositories/category-repository';
 
 export type EntityArrayResponseType = HttpResponse<Category[]>;
 @Injectable()

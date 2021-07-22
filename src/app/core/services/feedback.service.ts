@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { Feedback } from "../domain/entities/feedback";
-import { FeedbackRepository } from "../repository/feedback.repository";
+import { FeedbackRepository } from "../repositories/feedback-repository";
 
 @Injectable()
 export class FeedbackService extends FeedbackRepository {

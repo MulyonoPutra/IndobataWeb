@@ -2,7 +2,7 @@ import { HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Clients } from '../domain/entities/clients';
-import { ClientsRepository } from '../repository/clients.repository';
+import { ClientsRepository } from '../repositories/clients-repository';
 
 export type EntityArrayResponseType = HttpResponse<Clients[]>;
 
@@ -16,7 +16,7 @@ export class ClientsService extends ClientsRepository {
   getAllClients(): Observable<Clients[]> {
     return this.clientsRepository.getAllClients();
   }
-  
+
   addClients(clients: Clients): Observable<any> {
     return this.clientsRepository.addClients(clients);
   }

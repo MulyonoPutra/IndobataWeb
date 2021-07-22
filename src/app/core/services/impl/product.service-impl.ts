@@ -5,30 +5,15 @@ import { first, map, mergeMap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { Search } from '../../domain/dto/search';
 import { Product } from '../../domain/entities/product';
-import { ProductRepository } from '../../repository/product.repository';
-import { TokenService } from '../token.service';
-
+import { ProductRepository } from '../../repositories/product-repository';
 @Injectable()
 export class ProductServiceImpl extends ProductRepository {
-
   public product: Product;
 
   info: any;
 
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-      Authorization: 'Bearer ' + this.token,
-    }),
-  };
-
-  constructor(private http: HttpClient, private token: TokenService) {
+  constructor(private http: HttpClient) {
     super();
-    this.info = {
-      token: this.token.getToken(),
-      username: this.token.getUserName(),
-      authorities: this.token.getAuthorities(),
-    };
   }
 
   getAllProduct(): Observable<Product[]> {
@@ -36,7 +21,7 @@ export class ProductServiceImpl extends ProductRepository {
   }
 
   addProduct(product: Product): Observable<any> {
-    return this.http.product(environment.baseEndpoint + 'api/product', product);
+    return this.http.post(environment.baseEndpoint + 'api/product', product);
   }
 
   updateProduct(product: Product): Observable<any> {
@@ -58,11 +43,7 @@ export class ProductServiceImpl extends ProductRepository {
 
   search(search: Search): Observable<any> {
     return this.http
-      .product(
-        environment.baseEndpoint + 'api/product/search/author',
-        search,
-        this.httpOptions
-      )
+      .post(environment.baseEndpoint + 'api/product/search/author', search)
       .pipe(map((response: any) => response));
   }
 }

@@ -4,12 +4,12 @@ import { Observable } from 'rxjs';
 import { Search } from '../domain/dto/search';
 import { Category } from '../domain/entities/category';
 import { Product } from '../domain/entities/product';
-import { ProductRepository } from '../repository/product.repository';
+import { ProductRepository } from '../repositories/product-repository';
 
 export type EntityArrayResponseType = HttpResponse<Category[]>;
 @Injectable()
 export class ProductService extends ProductRepository {
-  
+
   constructor(private productRepository: ProductRepository) {
     super();
   }

@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Clients } from '../../domain/entities/clients';
-import { ClientsRepository } from '../../repository/clients.repository';
+import { ClientsRepository } from '../../repositories/clients-repository';
 
 @Injectable()
 export class ClientsServiceImpl extends ClientsRepository {

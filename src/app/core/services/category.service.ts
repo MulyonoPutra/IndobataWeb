@@ -3,9 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Search } from '../domain/dto/search';
 import { Category } from '../domain/entities/category';
-import {
-  CategoryRepository,
-} from '../repository/category.repository';
+import { CategoryRepository } from '../repositories/category-repository';
 
 export type EntityArrayResponseType = HttpResponse<Category[]>;
 @Injectable()

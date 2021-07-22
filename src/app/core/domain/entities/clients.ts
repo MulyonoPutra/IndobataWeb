@@ -14,7 +14,7 @@ export class IClients implements Clients {
     public address?: string,
     public url?: string,
     public imagesContentType?: string,
-    public images?: string;
+    public images?: string
   ) {}
 }
 
