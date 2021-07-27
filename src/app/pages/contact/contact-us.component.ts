@@ -1,4 +1,11 @@
+import { HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { finalize } from 'rxjs/operators';
+import { Feedback, IFeedback } from 'src/app/core/domain/entities/feedback';
+import { FeedbackRepository } from 'src/app/core/repositories/feedback-repository';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contact-us',
@@ -93,40 +100,57 @@ import { Component, OnInit } from '@angular/core';
           <div class="card rounded mt-3 mb-3 border-col">
             <div class="card-body">
               <form
-                class="form-group"
-                id="my-form"
-                action="https://formspree.io/meqreaqg"
-                method="POST"
+                name="editForm"
+                role="form"
+                novalidate
+                (ngSubmit)="save()"
+                [formGroup]="editForm"
               >
-                <input
-                  required
-                  id="name"
-                  class="form-control form-control-lg mb-3"
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                />
-                <input
-                  required
-                  id="email"
-                  class="form-control form-control-lg mb-3"
-                  type="text"
-                  name="email"
-                  placeholder="Email Address"
-                />
-                <textarea
-                  required
-                  id="messages"
-                  style="height: 120px;"
-                  class="form-control form-control-lg"
-                  type="text"
-                  name="messages"
-                  placeholder="Messages"
-                ></textarea>
+                <div class="form-group">
+                  <input
+                    required
+                    id="name"
+                    class="form-control form-control-lg mb-3"
+                    type="text"
+                    placeholder="Name"
+                    name="name"
+                    id="name"
+                    data-cy="name"
+                    formControlName="name"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <input
+                    class="form-control form-control-lg mb-3"
+                    type="text"
+                    name="email"
+                    id="email"
+                    data-cy="email"
+                    formControlName="email"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <textarea
+                    required
+                    id="messages"
+                    style="height: 120px;"
+                    class="form-control form-control-lg"
+                    type="text"
+                    name="messages"
+                    id="messages"
+                    data-cy="messages"
+                    formControlName="messages"
+                    required
+                  ></textarea>
+                </div>
                 <button
                   style="margin-right: auto;"
                   class="btn btn-primary rounded border mt-2"
-                  id="send"
+                  [disabled]="editForm.invalid || isSaving"
                 >
                   Send Messages
                 </button>
@@ -141,7 +165,61 @@ import { Component, OnInit } from '@angular/core';
     <section class="bg-section"></section> `,
 })
 export class ContactUsComponent implements OnInit {
-  constructor() { }
+  public isSaving = false;
 
-  ngOnInit(): void { }
+  editForm = this.fb.group({
+    id: [],
+    name: [null, [Validators.required]],
+    email: [null, [Validators.required]],
+    messages: [null, [Validators.required]],
+  });
+
+  constructor(
+    protected feedbackService: FeedbackRepository,
+    protected fb: FormBuilder
+  ) {}
+
+  ngOnInit(): void {}
+
+  save(): void {
+    this.isSaving = true;
+    const feedback = this.createFromForm();
+    this.subscribeToSaveResponse(this.feedbackService.addFeedback(feedback));
+  }
+
+  protected createFromForm(): Feedback {
+    return {
+      ...new IFeedback(),
+      id: this.editForm.get(['id'])!.value,
+      name: this.editForm.get(['name'])!.value,
+      email: this.editForm.get(['email'])!.value,
+      messages: this.editForm.get(['messages'])!.value,
+    };
+  }
+
+  protected subscribeToSaveResponse(
+    result: Observable<HttpResponse<Feedback>>
+  ): void {
+    result.pipe(finalize(() => this.onSaveFinalize())).subscribe(
+      () => this.onSaveSuccess(),
+      () => this.onSaveError()
+    );
+  }
+
+  protected onSaveSuccess(): void {
+    Swal.fire('Thank you', 'For your feedback, we appreciate it!', 'success');
+    setTimeout(() => {
+      this.previousState();
+    }, 7000);
+  }
+
+  protected onSaveError(): void {}
+
+  protected onSaveFinalize(): void {
+    this.isSaving = false;
+  }
+
+  previousState(): void {
+    window.history.back();
+  }
 }
