@@ -129,6 +129,7 @@ import Swal from 'sweetalert2';
                     id="email"
                     data-cy="email"
                     formControlName="email"
+                    placeholder="Email"
                     required
                   />
                 </div>
@@ -144,6 +145,7 @@ import Swal from 'sweetalert2';
                     id="messages"
                     data-cy="messages"
                     formControlName="messages"
+                    placeholder="Messages"
                     required
                   ></textarea>
                 </div>
