@@ -5,56 +5,48 @@ import { ClientsRepository } from 'src/app/core/repositories/clients-repository'
 import { DataUtils } from 'src/app/core/services/utils/data-utils.service';
 
 @Component({
-  template: `<div class="jumbotron" style="color: #40a11ade;">
-      <div
-        class="title-header animate__animated animate__zoomInDown font-poppins"
-      >
-        <h1>Our Clients</h1>
-        <div style="color: #ffffff23;">
-          <h2>Indobata</h2>
-          <h3>Concrete Roof Tile & Concrete Block Manufacturing</h3>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div
-          class="mt-3 col-md-4 position-relative"
-          *ngFor="let client of clients"
-        >
-          <div class="card box" style="width: 21rem" data-aos="zoom-in">
-            <img
-              [src]="
-                'data:' + client.imagesContentType + ';base64,' + client.images
-              "
-
-              class="card-img-top"
-            />
-            <div class="card-body">
-              <h5 class="card-title">{{ client?.name }}</h5>
-              <p class="text" [innerHTML]="client.address"></p>
-            </div>
-            <div class="card-footer">
-              <div class="d-flex bd-highlight mb-3">
-                <div class="font-size me-auto p-2 bd-highlight">
-                  <!-- {{ post?.createdDate | date: "short" }} -->
-                  <!--            {{ calculateDiff(post) }}
-                  {{ hourTime(post) }} -->
-                </div>
-                <div class="font-size p-2 bd-highlight"></div>
-                <div class="font-size p-2 bd-highlight">
-                  <!--   {{ post?.author }} -->
-                </div>
+  template: `
+          <div class="jumbotron" style="color: #40a11ade;">
+            <div
+              class="title-header animate__animated animate__zoomInDown font-poppins">
+              <h1>Our Clients</h1>
+              <div style="color: #ffffff23;">
+                <h2>Indobata</h2>
+                <h3>Concrete Roof Tile & Concrete Block Manufacturing</h3>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-3"></div>
-      </div>
-    </div> `,
-  styles: [
-    `
+
+          <div class="container">
+            <div class="row">
+              <div
+                class="mt-3 col-md-4 position-relative"
+                *ngFor="let client of clients">
+                <div class="card box" style="width: 21rem" data-aos="zoom-in">
+                  <img
+                    [src]="
+                      'data:' + client.imagesContentType + ';base64,' + client.images"
+                    class="card-img-top"/>
+                  <div class="card-body">
+                    <h5 class="card-title">{{ client?.name }}</h5>
+                    <p class="text" [innerHTML]="client.address"></p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex bd-highlight mb-3">
+                      <div class="font-size me-auto p-2 bd-highlight">
+
+                      </div>
+                      <div class="font-size p-2 bd-highlight"></div>
+                      <div class="font-size p-2 bd-highlight">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3"></div>
+            </div>
+          </div> `,
+  styles: [`
       .logo-size {
         height: 300px;
         width: 300px;
@@ -101,18 +93,13 @@ import { DataUtils } from 'src/app/core/services/utils/data-utils.service';
         height: 300px;
         object-fit: cover;
       }
-    `,
-  ],
+    `,]
 })
 export class OurClientsComponent implements OnInit {
   clients: Clients[] = [];
 
   public client: Clients;
-  constructor(
-    private clientService: ClientsRepository,
-    protected dataUtils: DataUtils,
-    private router: Router
-  ) {}
+  constructor(private clientService: ClientsRepository, protected dataUtils: DataUtils, private router: Router) { }
 
   ngOnInit(): void {
     this.findAllClients();

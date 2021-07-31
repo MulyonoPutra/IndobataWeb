@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -23,6 +23,7 @@ import { ProductRepository } from './core/repositories/product-repository';
 import { ClientsRepository } from './core/repositories/clients-repository';
 import { CategoryRepository } from './core/repositories/category-repository';
 import { FeedbackRepository } from './core/repositories/feedback-repository';
+import { ProductCategoryComponent } from './pages/product-category/product-category.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { FeedbackRepository } from './core/repositories/feedback-repository';
     AboutUsComponent,
     ContactUsComponent,
     OurClientsComponent,
+    ProductCategoryComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +44,7 @@ import { FeedbackRepository } from './core/repositories/feedback-repository';
     RouterModule.forRoot([
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: 'product', component: ProductComponent },
+      { path: 'category/:id', component: ProductCategoryComponent },
       { path: 'home', component: HomeComponent },
       { path: 'about-us', component: AboutUsComponent },
       { path: 'contact-us', component: ContactUsComponent },

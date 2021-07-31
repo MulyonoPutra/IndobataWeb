@@ -23,65 +23,67 @@ import { ProductRepository } from 'src/app/core/repositories/product-repository'
 
     <div class="container">
       <div class="mt-4 mb-2" data-aos="zoom-out-left">
-        <div class="container">
-          <!-- Button -->
-          <div class="row">
-            <button
-              type="button"
-              class="btn btn-outline-success btn-lg ml-2 col"
-            >
-              Genteng Beton
-            </button>
-            <button
-              type="button"
-              class="btn btn-outline-success btn-lg ml-2 col"
-            >
-              Paving Block
-            </button>
-            <button
-              type="button"
-              class="btn btn-outline-success btn-lg ml-2 col"
-            >
-              Roster
-            </button>
-            <button
-              type="button"
-              class="btn btn-outline-success btn-lg ml-2 col"
-            >
-              Batako Press
-            </button>
-            <button
-              type="button"
-              class="btn btn-outline-success btn-lg ml-2 col"
-            >
-              Kanstin
-            </button>
-            <button
-              type="button"
-              class="btn btn-outline-success btn-lg ml-2 col"
-            >
-              Buis Beton
-            </button>
-            <button
-              type="button"
-              class="btn btn-outline-success btn-lg ml-2 col"
-            >
-              Rangka Atap Baja Ringan
-            </button>
-            <button
-              type="button"
-              class="btn btn-outline-success btn-lg ml-2 col"
-            >
-              Ubin Difabel
-            </button>
+        <div class="d-flex bd-highlight mb-3">
+          <div class="me-auto p-2 bd-highlight">
+            <div class="dropdown">
+              <button
+                class="btn btn-primary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Category
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <ul class="dropdown-item" *ngFor="let category of categories">
+                  <li [routerLink]="'/category/' + category.id">
+                    {{ category.name }}
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <!-- Button -->
+          <div class="p-2 bd-highlight">
+            <div
+              style="width: 300px"
+              class="input-group mb-3"
+              *ngIf="isLoggedIn"
+            >
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Find By Author"
+                aria-label="Find By Author"
+                aria-describedby="searchAuthor"
+                [(ngModel)]="search.searchKey"
+                [ngModelOptions]="{ standalone: true }"
+              />
+              <button
+                class="btn btn-primary"
+                type="button"
+                id="search-btn"
+                [disabled]="!search.searchKey"
+              >
+                Search
+              </button>
+              <button
+                class="btn btn-primary"
+                type="button"
+                id="search-btn"
+                [disabled]="!search.searchKey"
+              >
+                Refresh
+              </button>
+            </div>
+          </div>
         </div>
         &nbsp;
 
         <div class="row">
           <div
-            class="mt-3 col-md-3 position-relative"
+            class="mt-3 col-md-4 position-relative"
             *ngFor="let product of productCollection"
           >
             <div class="card box" style="width: 21rem" data-aos="zoom-in">
@@ -95,15 +97,9 @@ import { ProductRepository } from 'src/app/core/repositories/product-repository'
                 class="card-img-top"
               />
               <div class="card-body">
-                <h5 class="card-title">{{ product?.title }}</h5>
+                <h5 class="card-title">{{ product?.productName }}</h5>
                 <p>{{ product.category_product?.name }}</p>
                 <p class="text" [innerHTML]="product.content"></p>
-                <a
-                  style="color: #fd0dfd"
-                  (click)="productDetailsRoute(product)"
-                >
-                  <p>Read More..</p>
-                </a>
               </div>
             </div>
           </div>
@@ -136,7 +132,7 @@ export class ProductComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.loadAllProducts;
+    this.loadAllProducts();
     this.findAllCategory();
     this.activatedRoute.paramMap.subscribe(() => {
       this.handlePostByCategory();
