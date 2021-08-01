@@ -154,7 +154,7 @@ import { ProductRepository } from 'src/app/core/repositories/product-repository'
             <div class="col mb-5 text-center" style="margin-left: 40px;">
               &nbsp;
               <h1 class="font-poppins" style="text-align: center;">
-                Tersedia di Marketplace
+                Available Marketplace
               </h1>
               <div class="row mt-5" data-aos="zoom-in-down">
                 <a href="https://www.tokopedia.com/" target="_blank">
