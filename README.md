@@ -1,5 +1,8 @@
 # Indobata
 
+![screencapture-localhost-4200-home-2021-08-02-03_48_17](https://user-images.githubusercontent.com/50153639/127784933-d6ec840c-230c-46f6-8866-9d0210ab96db.png)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
 
 ## Development server
