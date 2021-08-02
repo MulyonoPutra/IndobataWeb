@@ -6,10 +6,8 @@ import { Category } from '../domain/entities/category';
 import { Product } from '../domain/entities/product';
 import { ProductRepository } from '../repositories/product-repository';
 
-export type EntityArrayResponseType = HttpResponse<Category[]>;
 @Injectable()
 export class ProductService extends ProductRepository {
-
   constructor(private productRepository: ProductRepository) {
     super();
   }
@@ -36,3 +34,5 @@ export class ProductService extends ProductRepository {
     return this.productRepository.getProductByCategoryId(categoryId);
   }
 }
+
+export type EntityArrayResponseType = HttpResponse<Category[]>;

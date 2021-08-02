@@ -34,7 +34,7 @@ import { ProductRepository } from 'src/app/core/repositories/product-repository'
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Category
+                Choose Category
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <ul class="dropdown-item" *ngFor="let category of categories">
@@ -108,6 +108,45 @@ import { ProductRepository } from 'src/app/core/repositories/product-repository'
       </div>
     </div>
   `,
+  styles: [
+    `
+      .card-img-top {
+        border-radius: 10px;
+      }
+
+      .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid #dc354500;
+        height: 70vh !important;
+      }
+
+      .card-img-top {
+        border-radius: 10px;
+      }
+
+      img {
+        float: left;
+        width: 350px;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .btn-primary {
+        border-radius: 30px;
+        border: 0px solid;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+    `,
+  ],
 })
 export class ProductComponent implements OnInit {
   public product: Product;

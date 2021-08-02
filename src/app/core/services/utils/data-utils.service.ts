@@ -5,7 +5,6 @@ import { FormGroup } from '@angular/forms';
 export type FileLoadErrorType = 'not.image' | 'could.not.extract';
 
 export interface FileLoadError {
-
   message: string;
   key: FileLoadErrorType;
   params?: any;
@@ -18,7 +17,6 @@ export interface FileLoadError {
   providedIn: 'root',
 })
 export class DataUtils {
-
   /**
    * Method to find the byte size of the string provides
    */
@@ -67,7 +65,12 @@ export class DataUtils {
    * @returns an observable that loads file to form field and completes if sussessful
    *      or returns error as FileLoadError on failure
    */
-  loadFileToForm(event: Event, editForm: FormGroup, field: string, isImage: boolean): Observable<void> {
+  loadFileToForm(
+    event: Event,
+    editForm: FormGroup,
+    field: string,
+    isImage: boolean
+  ): Observable<void> {
     return new Observable((observer: Observer<void>) => {
       const eventTarget: HTMLInputElement | null =
         event.target as HTMLInputElement | null;

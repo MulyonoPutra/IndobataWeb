@@ -13,7 +13,7 @@ import { Category, getCategoryIdentifier } from '../../domain/entities/category'
 import { isPresent } from '../../utility/operators';
 import { CategoryRepository } from '../../repositories/category-repository';
 
-export type EntityArrayResponseType = HttpResponse<Category[]>;
+
 @Injectable()
 export class CategoryServiceImpl extends CategoryRepository {
 
@@ -36,11 +36,6 @@ export class CategoryServiceImpl extends CategoryRepository {
 
   search(search: Search): Observable<any> {
     throw new Error('Method not implemented.');
-  }
-
-  private handleError(res: HttpErrorResponse | any) {
-    console.error(res.error || res.body.error);
-    return observableThrowError(res.error || 'Server error');
   }
 
   query(req?: any): Observable<EntityArrayResponseType> {
@@ -77,3 +72,6 @@ export class CategoryServiceImpl extends CategoryRepository {
     return categoryCollection;
   }
 }
+
+
+export type EntityArrayResponseType = HttpResponse<Category[]>;

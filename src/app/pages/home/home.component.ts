@@ -142,7 +142,6 @@ import { ProductRepository } from 'src/app/core/repositories/product-repository'
       </div>
       &nbsp;
       <div class="text-center">
-
         <button class="btn btn-primary" [routerLink]="['/product']">
           View More..
         </button>
@@ -208,7 +207,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.loadAllProducts();
     const btn = document.getElementById('btn-product');
-
     btn.innerHTML = 'View Our Product';
     btn.style.borderRadius = '25px';
   }

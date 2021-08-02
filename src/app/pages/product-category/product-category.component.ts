@@ -7,7 +7,7 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-product-category',
   template: `
-    <div class="container" *ngIf="productCollection.length > 0; else empty">
+    <div class="container mb-5" *ngIf="productCollection.length > 0; else empty">
       <button class="btn btn-primary" (click)="goBack()">Back</button>
       <div class="row">
         <div
@@ -42,6 +42,7 @@ import { Location } from '@angular/common';
   styles: [],
 })
 export class ProductCategoryComponent implements OnInit {
+
   public product: Product;
 
   public productCollection: Product[] = [];
@@ -52,7 +53,6 @@ export class ProductCategoryComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private productService: ProductRepository,
     private location: Location,
-    private router: Router
   ) {}
 
   ngOnInit(): void {

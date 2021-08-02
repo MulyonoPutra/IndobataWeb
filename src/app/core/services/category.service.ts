@@ -30,9 +30,11 @@ export class CategoryService extends CategoryRepository {
   }
 
   search(search: Search): Observable<any> {
-    throw new Error('Method not implemented.');
+    return this.categoryRepository.search(search);
   }
+
   query(): Observable<EntityArrayResponseType> {
-    throw new Error('Method not implemented.');
+    return this.categoryRepository.query();
   }
+
 }

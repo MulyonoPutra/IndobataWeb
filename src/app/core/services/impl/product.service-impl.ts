@@ -8,6 +8,7 @@ import { Product } from '../../domain/entities/product';
 import { ProductRepository } from '../../repositories/product-repository';
 @Injectable()
 export class ProductServiceImpl extends ProductRepository {
+
   public product: Product;
 
   info: any;
@@ -46,4 +47,5 @@ export class ProductServiceImpl extends ProductRepository {
       .post(environment.baseEndpoint + 'api/product/search/author', search)
       .pipe(map((response: any) => response));
   }
+  
 }

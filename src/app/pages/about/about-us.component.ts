@@ -4,9 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-about-us',
   template: `
     <div class="jumbotron" style="color: #40a11ade;">
-      <div
-        class="title-header animate__animated animate__zoomInDown font-poppins"
-      >
+      <div class="title-header animate__animated animate__zoomInDown font-poppins">
         <h1>About Us</h1>
         <div style="color: #ffffff23;">
           <h2>Indobata</h2>
@@ -42,7 +40,9 @@ import { Component, OnInit } from '@angular/core';
                       Vision
                     </h3>
                     <p class="paragraf">
-                      Indobata is always able to meet the needs of the existing market by presenting concrete high - quality products, decorative, and product resistance in all weathers.
+                      Indobata is always able to meet the needs of the existing
+                      market by presenting concrete high - quality products,
+                      decorative, and product resistance in all weathers.
                     </p>
                   </div>
                 </div>
@@ -95,9 +95,7 @@ import { Component, OnInit } from '@angular/core';
               </p>
             </div>
           </div>
-          <div
-            class="card ml-2 border-col rounded animate__animated animate__bounceInDown"
-          >
+          <div class="card ml-2 border-col rounded animate__animated animate__bounceInDown">
             <img
               class="card-img-top why-choose-us mt-3"
               src="assets/img/man.svg"
@@ -113,9 +111,7 @@ import { Component, OnInit } from '@angular/core';
               </p>
             </div>
           </div>
-          <div
-            class="card ml-2 border-col rounded rounded animate__animated animate__bounceInRight"
-          >
+          <div class="card ml-2 border-col rounded rounded animate__animated animate__bounceInRight">
             <img
               class="card-img-top why-choose-us mt-3"
               src="assets/img/user.svg"
@@ -133,9 +129,7 @@ import { Component, OnInit } from '@angular/core';
           </div>
         </div>
         <div class="card-group mt-2">
-          <div
-            class="card border-col rounded animate__animated animate__bounceInLeft"
-          >
+          <div class="card border-col rounded animate__animated animate__bounceInLeft">
             <img
               class="card-img-top why-choose-us mt-3"
               src="assets/img/medal.svg"
@@ -151,9 +145,7 @@ import { Component, OnInit } from '@angular/core';
               </p>
             </div>
           </div>
-          <div
-            class="card ml-2 border-col rounded animate__animated animate__bounceInDown"
-          >
+          <div class="card ml-2 border-col rounded animate__animated animate__bounceInDown" >
             <img
               class="card-img-top why-choose-us mt-3"
               src="assets/img/services1.svg"
@@ -169,9 +161,7 @@ import { Component, OnInit } from '@angular/core';
               </p>
             </div>
           </div>
-          <div
-            class="card ml-2 border-col rounded animate__animated animate__bounceInRight"
-          >
+          <div class="card ml-2 border-col rounded animate__animated animate__bounceInRight" >
             <img
               class="card-img-top why-choose-us mt-3"
               src="assets/img/cup.svg"
@@ -191,8 +181,9 @@ import { Component, OnInit } from '@angular/core';
     </section>
   `,
 })
-export class AboutUsComponent implements OnInit {
-  constructor() { }
 
-  ngOnInit(): void { }
+export class AboutUsComponent implements OnInit {
+  constructor() {}
+
+  ngOnInit(): void {}
 }

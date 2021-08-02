@@ -11,16 +11,7 @@ export class AppComponent implements OnInit {
 
   showLoadingIndicator = true;
 
-  constructor(private _router: Router) {
-    this._router.events.subscribe((routerEvent: Event) => {
-      if (routerEvent instanceof NavigationStart) {
-        this.showLoadingIndicator = true;
-      }
-      if (routerEvent instanceof NavigationEnd) {
-        this.showLoadingIndicator = false;
-      }
-    });
-  }
+  constructor() {}
 
   ngOnInit(): void {
     AOS.init();
