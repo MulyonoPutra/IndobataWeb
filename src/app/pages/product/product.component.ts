@@ -124,6 +124,7 @@ import { ProductRepository } from 'src/app/core/repositories/product-repository'
         background-clip: border-box;
         border: 1px solid #dc354500;
         height: 70vh !important;
+        
       }
 
       .card-img-top {

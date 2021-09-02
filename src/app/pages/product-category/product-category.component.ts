@@ -7,7 +7,10 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-product-category',
   template: `
-    <div class="container mb-5" *ngIf="productCollection.length > 0; else empty">
+    <div
+      class="container mb-5"
+      *ngIf="productCollection.length > 0; else empty"
+    >
       <button class="btn btn-primary" (click)="goBack()">Back</button>
       <div class="row">
         <div
@@ -27,7 +30,6 @@ import { Location } from '@angular/common';
             <div class="card-body">
               <h5 class="card-title">{{ product?.productName }}</h5>
               <p>{{ product.category_product?.name }}</p>
-
             </div>
           </div>
         </div>
@@ -36,13 +38,61 @@ import { Location } from '@angular/common';
     </div>
     &nbsp;
     <ng-template #empty>
-      <p>No Data</p>
+      <img
+        src="./assets/img/blank.png
+        "
+        class="center"
+      />
     </ng-template>
   `,
-  styles: [],
+  styles: [
+    `
+      .card-img-top {
+        border-radius: 10px;
+      }
+
+      .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid #dc354500;
+        height: 70vh !important;
+      }
+
+      .card-img-top {
+        border-radius: 10px;
+      }
+
+      img {
+        float: left;
+        width: 350px;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .btn-primary {
+        border-radius: 30px;
+        border: 0px solid;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      .center {
+        width: 50%;
+        margin-left: 20%;
+        margin-right: 20%;
+        height: 10% ;
+      }
+    `,
+  ],
 })
 export class ProductCategoryComponent implements OnInit {
-
   public product: Product;
 
   public productCollection: Product[] = [];
@@ -52,7 +102,7 @@ export class ProductCategoryComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private productService: ProductRepository,
-    private location: Location,
+    private location: Location
   ) {}
 
   ngOnInit(): void {
