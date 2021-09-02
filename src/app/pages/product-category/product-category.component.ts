@@ -38,17 +38,23 @@ import { Location } from '@angular/common';
     </div>
     &nbsp;
     <ng-template #empty>
-      <img
-        src="./assets/img/blank.png
-        "
-        class="center"
-      />
+      <img src="./assets/img/blank.png" class="center" />
+      <div class="no-data">Data is Empty!</div>
     </ng-template>
   `,
   styles: [
     `
       .card-img-top {
         border-radius: 10px;
+      }
+
+      .no-data {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #5bd32b;
+        font-family: 'Poppins', sans-serif;
       }
 
       .card {
@@ -87,7 +93,7 @@ import { Location } from '@angular/common';
         width: 50%;
         margin-left: 20%;
         margin-right: 20%;
-        height: 10% ;
+        height: 10%;
       }
     `,
   ],
